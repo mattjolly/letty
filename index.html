@@ -12,7 +12,7 @@ banner:
 spotlight_a:
   style: 1
   fullscreen: true
-  orient: left
+  orient: right
   content_align: left
   image-position: right
   onscroll_image: fade-in
@@ -20,6 +20,12 @@ spotlight_a:
 spotlight_b:
   style: 1
   orient: left
+  content_align: left
+  onscroll_image: fade-in
+
+spotlight_c:
+  style: 1
+  orient: right
   content_align: left
   onscroll_image: fade-in
 
@@ -107,89 +113,71 @@ items:
 	{% capture content %}
 		<h1>Letty Stott</h1>
 		<p class="major">Letty is one of the UK’s most versatile French horn players, with her career spanning classical orchestral performance, contemporary music, theatre and music education. </p>
+		<ul class="actions">
+			<li><a class="button primary smooth-scroll-middle" style="cursor: pointer;" href="#performer">Performer</a></li>
+			<li><a class="button primary smooth-scroll-middle" style="cursor: pointer;" href="#theatre">Theatre</a></li>
+			<li><a class="button primary smooth-scroll-middle" style="cursor: pointer;" href="#education">Education</a></li>
+		</ul>
 	{% endcapture %}
 	{% include components/banner.html
 		settings=page.banner
 		content=content
-		image="/images/portraits/IMG_3737.JPG"
-		image-position="right"
+		image="/images/portraits/Letty-3.jpg"
 	%}
 
 <!-- Two -->
-	<section class="wrapper style1 align-center">
-		<div class="inner">
-			<h2>Performance</h2>
-			<p>As a multi-genre orchestral and chamber musician, Letty has performed in all of the major UK concert venues. She has worked with orchestras including BBC Concert Orchestra, Britten Sinfonia, National Symphony Orchestra, City of London Sinfonia, Royal Philharmonic Orchestra and English National Ballet, as well with English National Opera and English Touring Opera. Letty’s playing has been broadcast on BBC Radio 3 numerous times, including most recently with the Goldfield Ensemble on Hear and Now as well as In Tune. She has also worked on various projects with Apartment House contemporary music ensemble, performing on Radio France and recording new works, with upcoming performances at the Wigmore Hall in 2021 for a celebration of the work of Morton Feldman. </p>
+	{% capture content %}
+		<h2>Performer</h2>
+		<p>As a multi-genre orchestral and chamber musician, Letty has performed in all of the major UK concert venues. She has worked with orchestras including BBC Concert Orchestra, Britten Sinfonia, National Symphony Orchestra, City of London Sinfonia, Royal Philharmonic Orchestra and English National Ballet, as well with English National Opera and English Touring Opera. Letty’s playing has been broadcast on BBC Radio 3 numerous times, including most recently with the Goldfield Ensemble on Hear and Now as well as In Tune. She has also worked on various projects with Apartment House contemporary music ensemble, performing on Radio France and recording new works, with upcoming performances at the Wigmore Hall in 2021 for a celebration of the work of Morton Feldman. </p>
 
-			<p>Letty works frequently with the Multi-Story Orchestra and has played for various projects with the London Contemporary Orchestra as well as Urban Soul Orchestra.</p>
-			{% assign content = "" | split: "" %}
-
-				{% capture x %}
-					<h3>Commercial</h3>
-					<p>Collaborations and tours with commercial artists. </p>
-				{% endcapture %}
-				{% assign content = content | push: x %}
-
-				{% capture x %}
-					<h3>Theatre</h3>
-					<p>On stage with the National Theatre and Royal Shakespeare Company. </p>
-				{% endcapture %}
-				{% assign content = content | push: x %}
-
-				{% capture x %}
-					<h3>Poetry</h3>
-					<p>Work on interdisciplinary shows with Simon Armitage, Michael Horowitz and Kate Tempest.</p>
-				{% endcapture %}
-				{% assign content = content | push: x %}
-
-				{% capture x %}
-					<h3>Band</h3>
-					<p>Songwriting, recording and performing with Perhaps Contraption.</p>
-				{% endcapture %}
-				{% assign content = content | push: x %}
-
-
-			{% include components/items.html
-				settings=page.items
-				items=content
-			%}
-		</div>
-	</section>
+		<p>Letty works frequently with the Multi-Story Orchestra and has played for various projects with the London Contemporary Orchestra as well as Urban Soul Orchestra.</p>
+		<ul class="actions stacked">
+			<li><a href="#" class="button">Learn More</a></li>
+		</ul>
+	{% endcapture %}
+	{% include components/spotlight.html
+		settings=page.spotlight_a
+		content=content
+		image="images/portraits/IMG_2515.jpg"
+		image-position="center"
+		id="performer"
+	%}
 
 <!-- Three -->
-	<section class="wrapper style1 align-center">
-		<div class="inner">
-			<h2>Outreach</h2>
-			<p>Letty has always believed that music performance and education go hand in hand and throughout her career, she has aimed to reach as many children and young people as possible. Letty has worked as a performer on education projects ranging from SEN workshops in special needs schools, to large-scale nationwide outreach projects with many of the UK’s leading orchestras. </p>
+	{% capture content %}
+		<h2>Theatre</h2>
+		<p>Letty has considerable experience working in theatre and performed onstage for the highly acclaimed productions of <em>Amadeus</em> and <em>Macbeth</em> at the National Theatre (both as an original cast member and for the production’s revival, as well as for the NT Live broadcast). </p>
 
-			<p>She has demonstrated the French horn (including of course what makes it the best instrument!) to quite literally 1000’s of children and is happiest when sharing her love of music to new audiences. </p>
+		<p>“These 21 musicians are the backbone of this production, scattering and re-forming throughout, like some sort of murmuration of musically gifted starlings.”<br/>
+		The Times</p>
 
-			{% assign content = "" | split: "" %}
+		<ul class="actions stacked">
+			<li><a href="#" class="button">Learn More</a></li>
+		</ul>
+	{% endcapture %}
+	{% include components/spotlight.html
+		settings=page.spotlight_b
+		content=content
+		image="images/theatre/IMG_2516.JPG"
+		image-position="center"
+		id="theatre"
+	%}
 
-				{% capture x %}
-					<h3>Orchestral</h3>
-					<p>Working with groups from the Royal Philharmonic Orchestra to the Peppa Pig family. </p>
-				{% endcapture %}
-				{% assign content = content | push: x %}
+<!-- Four -->
+	{% capture content %}
+		<h2>Education</h2>
+		<p>Letty has always believed that music performance and education go hand in hand and throughout her career, she has aimed to reach as many children and young people as possible. Letty has worked as a performer on education projects ranging from SEN workshops in special needs schools, to large-scale nationwide outreach projects with many of the UK’s leading orchestras. </p>
 
-				{% capture x %}
-					<h3>Opera</h3>
-					<p>Part of projects with Royal Opera House, English National Opera, English Touring Opera and more. </p>
-				{% endcapture %}
-				{% assign content = content | push: x %}
+		<p>She has demonstrated the French horn (including of course what makes it the best instrument!) to quite literally thousands of children and is happiest when sharing her love of music to new audiences. </p>
 
-				{% capture x %}
-					<h3>Teaching</h3>
-					<p>Coaching youth ensembles and tutoring in schools and junior conservatoires.</p>
-				{% endcapture %}
-				{% assign content = content | push: x %}
-
-
-			{% include components/items.html
-				settings=page.items
-				items=content
-			%}
-		</div>
-	</section>
-
-
+		<ul class="actions stacked">
+			<li><a href="#" class="button">Learn More</a></li>
+		</ul>
+	{% endcapture %}
+	{% include components/spotlight.html
+		settings=page.spotlight_c
+		content=content
+		image="images/education/IMG_2559.jpg"
+		image-position="center"
+		id="education"
+	%}
