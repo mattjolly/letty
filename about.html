@@ -1,0 +1,146 @@
+---
+layout: default
+
+banner:
+  style: 1
+  fullscreen: true
+  orient: left
+  content_align: left
+  onload_image: fade-in
+  onload_content: fade-right
+
+spotlight_a:
+  style: 1
+  orient: right
+  content_align: left
+  onscroll_image: fade-in
+
+spotlight_b:
+  style: 1
+  orient: left
+  content_align: left
+  onscroll_image: fade-in
+
+gallery:
+  style: 2
+  size: medium
+  lightbox: true
+  button_label: 'Details'
+  onscroll: fade-in
+
+gallery_images:
+- full: images/gallery/fulls/01.jpg
+  thumb: images/gallery/thumbs/01.jpg
+  title: Ipsum Dolor
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/02.jpg
+  thumb: images/gallery/thumbs/02.jpg
+  title: Feugiat Lorem
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/03.jpg
+  thumb: images/gallery/thumbs/03.jpg
+  title: Magna Amet
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/04.jpg
+  thumb: images/gallery/thumbs/04.jpg
+  title: Sed Tempus
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/05.jpg
+  thumb: images/gallery/thumbs/05.jpg
+  title: Ultrices Magna
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/06.jpg
+  thumb: images/gallery/thumbs/06.jpg
+  title: Sed Tempus
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/07.jpg
+  thumb: images/gallery/thumbs/07.jpg
+  title: Ipsum Dolor
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/08.jpg
+  thumb: images/gallery/thumbs/08.jpg
+  title: Magna Risus
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/09.jpg
+  thumb: images/gallery/thumbs/09.jpg
+  title: Tempus Dolor
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/10.jpg
+  thumb: images/gallery/thumbs/10.jpg
+  title: Sed Etiam
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/11.jpg
+  thumb: images/gallery/thumbs/11.jpg
+  title: Magna Lorem
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/12.jpg
+  thumb: images/gallery/thumbs/12.jpg
+  title: Ipsum Dolor
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+
+items-3:
+  style: 1
+  size: medium
+  onscroll: fade-in
+
+items-2:
+  style: 1
+  size: big
+  onscroll: fade-in
+
+items-3:
+  style: 1
+  size: small
+  onscroll: fade-in
+---
+
+{% comment %}
+
+	Story by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Home page
+
+	Description:
+
+		Main page of the site.
+
+{% endcomment %}
+
+	<section class="wrapper style1 align-left">
+		<div class="inner">
+			<h2>Biography</h2>
+
+			<p>Letty completed her undergraduate degree at Oxford University, where she was awarded a music scholarship to Worcester College, studying with Professor Robert Saxton. In her second year, Letty won the Joan Conway performance prize, which enabled her to perform Mozart’s Quintet with the Allegri Quartet, one of the UK’s oldest and most established string quartets, in the Holywell Music Rooms. During that time, she also studied at the Royal Academy of Music with Mike Thompson and Richard Watkins. She then undertook an MPhil postgraduate degree at Cambridge University, studying Music Cognition at Sidney Sussex College, with her research focussing on music and its effect upon short-term working memory. Letty completed her postgraduate studies at the Guildhall School of Music and Drama, where she studied Leadership and Orchestral Performance, after being awarded scholarships from the Guildhall School as well as from the Wates Foundation. </p>
+
+      <p>Letty then went on to hold a two-year Junior Fellowship at the Guildhall School for research into contemporary music for the French horn. During this time, she also participated in the International Ensemble Modern Klangspuren Academy, held in Innsbruck, performing new music by composer-in-residence Unsuk Chin, as well as repertoire by Isang Yun, Hans Werne Henze and Webern. In her second year of her Fellowship, Letty was delighted to win the opportunity to perform James MacMillan’s Horn Quintet for the composer in the Barbican Hall as part of a London Symphony Orchestra concert series. Professors at GSMD included Hugh Seenan, Jonathan Lipton and John Kenny, as well as cross-arts tutors including Sigrun and Paul Griffiths, Nell Catchpole and Jan Hendrickse. Letty’s studies with John Kenny were instrumental in her love of contemporary music, as well as the springboard to her branching into performance-based research of other forms of horn including the alphorn, as well as older related instruments such as the Roman Cornu, Lituus and Iron Age Carnyx. Subsequently, she has continued her studies of these ancient instruments with the help of Dr Pippa Holmes, performing her first commissioned work Cornicen (The Horn-Blower) at Gods House Tower in Southampton, with an upcoming performance at the Europa Iron Age Conference in 2021. </p>	
+
+		</div>
+	</section>
+
+	<section class="wrapper style1 align-left">
+		<div class="inner">
+
+			{% assign content = "" | split: "" %}
+
+        {% capture x %}
+          <span class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/_o14l-GjN9M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+        {% endcapture %}
+
+        {% assign content = content | push: x %}
+
+        {% capture x %}
+          <span class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/9euLjh2h5iQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+        {% endcapture %}
+
+        {% assign content = content | push: x %}
+
+			{% include components/items.html
+				settings=page.items-2
+				items=content
+			%}
+		</div>
+	</section>

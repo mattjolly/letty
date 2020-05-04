@@ -1,0 +1,201 @@
+---
+layout: default
+
+banner:
+  style: 1
+  fullscreen: true
+  orient: left
+  content_align: left
+  onload_image: fade-in
+  onload_content: fade-right
+
+spotlight_a:
+  style: 1
+  orient: right
+  content_align: left
+  onscroll_image: fade-in
+
+spotlight_b:
+  style: 1
+  orient: left
+  content_align: left
+  onscroll_image: fade-in
+
+gallery:
+  style: 2
+  size: medium
+  lightbox: true
+  button_label: 'Details'
+  onscroll: fade-in
+
+gallery_images:
+- full: images/gallery/fulls/01.jpg
+  thumb: images/gallery/thumbs/01.jpg
+  title: Ipsum Dolor
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/02.jpg
+  thumb: images/gallery/thumbs/02.jpg
+  title: Feugiat Lorem
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/03.jpg
+  thumb: images/gallery/thumbs/03.jpg
+  title: Magna Amet
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/04.jpg
+  thumb: images/gallery/thumbs/04.jpg
+  title: Sed Tempus
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/05.jpg
+  thumb: images/gallery/thumbs/05.jpg
+  title: Ultrices Magna
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/06.jpg
+  thumb: images/gallery/thumbs/06.jpg
+  title: Sed Tempus
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/07.jpg
+  thumb: images/gallery/thumbs/07.jpg
+  title: Ipsum Dolor
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/08.jpg
+  thumb: images/gallery/thumbs/08.jpg
+  title: Magna Risus
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/09.jpg
+  thumb: images/gallery/thumbs/09.jpg
+  title: Tempus Dolor
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/10.jpg
+  thumb: images/gallery/thumbs/10.jpg
+  title: Sed Etiam
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/11.jpg
+  thumb: images/gallery/thumbs/11.jpg
+  title: Magna Lorem
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+- full: images/gallery/fulls/12.jpg
+  thumb: images/gallery/thumbs/12.jpg
+  title: Ipsum Dolor
+  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
+
+items-3:
+  style: 1
+  size: medium
+  onscroll: fade-in
+
+items-2:
+  style: 1
+  size: big
+  onscroll: fade-in
+
+items-3:
+  style: 1
+  size: small
+  onscroll: fade-in
+---
+
+{% comment %}
+
+	Story by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Home page
+
+	Description:
+
+		Main page of the site.
+
+{% endcomment %}
+
+
+<!-- One -->
+	{% capture content %}
+		<h1>Theatre</h1>
+		<p>Letty has considerable experience working in theatre and performed onstage for the highly acclaimed production of Amadeus at the National Theatre (both as an original cast member and for the production’s revival, as well as for the NT Live broadcast). In this revolutionary production, Director Michael Longhurst and Movement Director Imogen Knight used a full chamber orchestra onstage throughout the play, with musicians acting as a form of Greek chorus to accentuate the dramatic narrative. </p>
+
+		<p>Despite this going against explicit instruction in the text from playwright Peter Schaeffer (who feared that live performance of Mozart would overshadow his work), the performance of this powerful play with the addition of live music for the first time (from both the orchestra as well as live opera singers) instead moved audiences more deeply, as much from the emotion of the music as from the drama of the text. With Lucian Msamati as Salieri opposite Adam Gillen’s immature and facetious Mozart, the production was a sold-out hit at the National Theatre both for its first run and then throughout its revival.</p>
+
+
+	{% endcapture %}
+	{% include components/banner.html
+		settings=page.banner
+		content=content
+		image="/images/theatre/IMG_2516.JPG"
+		image-position="right"
+	%}
+
+
+	<section class="wrapper style1 align-left">
+		<div class="inner">
+			<p>“Lucian Msamati’s Salieri is an immense performance” The Sunday Times</p>
+			<p>“These 21 musicians are the backbone of this production, scattering and re-forming throughout, like some sort of murmuration of musically gifted starlings.” The Times</p>
+			<p>“The National Theatre’s Amadeus is note-perfect”, The Telegraph</p>
+
+			{% assign content = "" | split: "" %}
+
+				{% capture x %}
+					<span class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/cEuJ56sHwgA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+				{% endcapture %}
+
+				{% assign content = content | push: x %}
+
+			{% include components/items.html
+				settings=page.items-2
+				items=content
+			%}
+		</div>
+	</section>
+
+
+
+
+	<section class="wrapper style1 align-left">
+		<div class="inner">
+
+			<p> Letty then went on to perform in the National Theatre’s production of Macbeth, starring Rory Kinnear and Anne-Marie Duff (including NT live broadcast to cinemas worldwide). Working closely with composer Orlando Gough, musical director Marc Tritschler and instrument-maker Simon Allen, the production involved a fascinating Research and Development opportunity to make new instruments that would feature in the play’s post-apocalyptic setting. As one of only two musicians in the production, Letty was involved with the creation of these new instruments from the start as well as being heavily involved with the composition process, which included learning new skills such as performing on bowed car-springs; using old organ pipes to create the sound of a castle asleep (for the soundtrack beneath Macbeth’s famous ‘sleep no more’ speech); and performing raucous calls on a ‘tri-horn’ with multiple bells and valve systems..!</p>
+
+			{% assign content = "" | split: "" %}
+
+				{% capture x %}
+					<span class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/HmaoYjRA0nw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+				{% endcapture %}
+
+				{% assign content = content | push: x %}
+
+				{% capture x %}
+					<span class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/W7K4yGYKuxI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+				{% endcapture %}
+
+				{% assign content = content | push: x %}
+
+			{% include components/items.html
+				settings=page.items-2
+				items=content
+			%}
+		</div>
+	</section>
+
+	<section class="wrapper style1 align-left">
+		<div class="inner">
+			<p>Letty has worked with the Royal Shakespeare Company, performing in Julius Caesar as part of the RSC’s Rome Season. The score was composed by Mira Calix for live brass instruments with electronics and involved close-microphone techniques from the players, including breath noises and valve sounds. </p>
+
+			<p>Finally, Letty has performed for theatre shows as a member of the orchestra for productions including Little Miss Sunshine (Arcola Theatre, London), and The Lion King.  </p>
+
+			{% assign content = "" | split: "" %}
+
+				{% capture x %}
+					<span class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/S_TUcUrAtEs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+				{% endcapture %}
+
+				{% assign content = content | push: x %}
+
+			{% include components/items.html
+				settings=page.items-2
+				items=content
+			%}
+		</div>
+	</section>
+
