@@ -45,6 +45,10 @@
 			strong {
 				font-weight: _font(weight-extrabold);
 			}
+
+			a {
+				text-decoration:none;
+			}
 		}
 
 		> nav {
@@ -226,6 +230,10 @@
 
 			> .navPanelToggle {
 				display: block;
+			}
+
+			> .logo a {
+				color: _palette(invert, fg-bold) !important; // to override bold style
 			}
 		}
 
