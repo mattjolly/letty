@@ -25,7 +25,6 @@
 		left: 0;
 		width: 100%;
 		height: _size(header, default);
-		line-height: _size(header, default);
 		background-color: _palette(bg);
 		box-shadow: 0 0 0.5rem 0 _palette(bg-shadow);
 		cursor: default;
@@ -63,13 +62,15 @@
 				> li {
 					position: relative;
 					display: inline-block;
-					margin: 0 1.5rem;
+					margin: 0 1rem;
 					padding: 0;
 
 					> a {
 						overflow: hidden;
 						text-decoration: none;
-						color: _palette(invert, fg-bold);
+						color: _palette(fg-bold);
+						padding: 5px;
+						background-color: rgba(235,235,235,0.5);
 
 						&.icon {
 							&:before {

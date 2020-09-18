@@ -1,32 +1,9 @@
 ---
 layout: default
 
-banner:
-  style: 1
-  fullscreen: true
-  orient: left
-  content_align: left
-  onload_image: fade-in
-  onload_content: fade-right
-
-spotlight_a:
-  style: 1
-  orient: right
-  content_align: left
-  onscroll_image: fade-in
-
-spotlight_b:
-  style: 1
-  orient: left
-  content_align: left
-  onscroll_image: fade-in
-
-gallery:
-  style: 2
-  size: medium
-  lightbox: true
-  button_label: 'Details'
-  onscroll: fade-in
+videos:
+- ID: _o14l-GjN9M
+- ID: 9euLjh2h5iQ
 
 gallery_images:
 - full: images/gallery/fulls/01.jpg
@@ -78,20 +55,14 @@ gallery_images:
   title: Ipsum Dolor
   excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
 
-items-3:
-  style: 1
+gallery_settings:
+  style: 2
   size: medium
+  lightbox: true
+  button_label: 'Details'
   onscroll: fade-in
 
-items-2:
-  style: 1
-  size: big
-  onscroll: fade-in
 
-items-3:
-  style: 1
-  size: small
-  onscroll: fade-in
 ---
 
 	<section class="wrapper style1 align-left">
@@ -105,18 +76,26 @@ items-3:
 		</div>
 	</section>
 
-	<section class="wrapper style1 align-left">
+	<section class="wrapper style1 align-center">
 		<div class="inner">
+     <h2>Videos</h2>
+     <div class="items style1 big onload-none onscroll-fade-in">
 
-      <div class="items style1 big onload-none onscroll-fade-in" >
-          <section>
-              <span class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/_o14l-GjN9M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
-          </section>
-
-          <section>
-              <span class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/9euLjh2h5iQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
-          </section>
-      </div>
-
+{% for video in page.videos %}
+          <section><div class="inner">
+              <span class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video.ID }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></span>
+          </div></section>
+{% endfor %}
 		</div>
 	</section>
+
+  <section class="wrapper style1 align-center">
+    <div class="inner">
+      <h2>Gallery</h2>
+    </div>
+    {% include components/gallery.html
+      settings=page.gallery_settings
+      images=page.gallery_images
+    %}
+  </section>
+

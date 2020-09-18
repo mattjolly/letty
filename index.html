@@ -6,7 +6,7 @@ performance_image: "images/portraits/IMG_2515.JPG"
 theatre_image: "images/theatre/IMG_2516.JPG"
 education_image: "images/education/IMG_2559.jpg"
 
-banner:
+top_row_settings:
   style: 1
   fullscreen: true
   orient: left
@@ -47,7 +47,7 @@ education_settings:
 		</ul>
 	{% endcapture %}
 	{% include components/banner.html
-		settings=page.banner
+		settings=page.top_row_settings
 		content=content
 		image=page.top_row_image
 	%}
