@@ -1,7 +1,9 @@
 ---
 layout: default
 
-banner:
+top_row_image: "/images/theatre/IMG_2516.JPG"
+
+banner_settings:
   style: 1
   fullscreen: true
   orient: left
@@ -20,63 +22,6 @@ spotlight_b:
   orient: left
   content_align: left
   onscroll_image: fade-in
-
-gallery:
-  style: 2
-  size: medium
-  lightbox: true
-  button_label: 'Details'
-  onscroll: fade-in
-
-gallery_images:
-- full: images/gallery/fulls/01.jpg
-  thumb: images/gallery/thumbs/01.jpg
-  title: Ipsum Dolor
-  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
-- full: images/gallery/fulls/02.jpg
-  thumb: images/gallery/thumbs/02.jpg
-  title: Feugiat Lorem
-  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
-- full: images/gallery/fulls/03.jpg
-  thumb: images/gallery/thumbs/03.jpg
-  title: Magna Amet
-  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
-- full: images/gallery/fulls/04.jpg
-  thumb: images/gallery/thumbs/04.jpg
-  title: Sed Tempus
-  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
-- full: images/gallery/fulls/05.jpg
-  thumb: images/gallery/thumbs/05.jpg
-  title: Ultrices Magna
-  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
-- full: images/gallery/fulls/06.jpg
-  thumb: images/gallery/thumbs/06.jpg
-  title: Sed Tempus
-  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
-- full: images/gallery/fulls/07.jpg
-  thumb: images/gallery/thumbs/07.jpg
-  title: Ipsum Dolor
-  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
-- full: images/gallery/fulls/08.jpg
-  thumb: images/gallery/thumbs/08.jpg
-  title: Magna Risus
-  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
-- full: images/gallery/fulls/09.jpg
-  thumb: images/gallery/thumbs/09.jpg
-  title: Tempus Dolor
-  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
-- full: images/gallery/fulls/10.jpg
-  thumb: images/gallery/thumbs/10.jpg
-  title: Sed Etiam
-  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
-- full: images/gallery/fulls/11.jpg
-  thumb: images/gallery/thumbs/11.jpg
-  title: Magna Lorem
-  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
-- full: images/gallery/fulls/12.jpg
-  thumb: images/gallery/thumbs/12.jpg
-  title: Ipsum Dolor
-  excerpt: Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.
 
 items-3:
   style: 1
@@ -122,9 +67,9 @@ items-3:
 
 	{% endcapture %}
 	{% include components/banner.html
-		settings=page.banner
+		settings=page.banner_settings
 		content=content
-		image="/images/theatre/IMG_2516.JPG"
+		image=page.top_row_image
 		image-position="right"
 	%}
 
