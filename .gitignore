@@ -2,6 +2,5 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
-.DS_Store
-images/.DS_Store
+find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch
 .DS_Store

@@ -94,22 +94,6 @@ items-3:
   onscroll: fade-in
 ---
 
-{% comment %}
-
-	Story by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
-
-	Name:
-
-		Home page
-
-	Description:
-
-		Main page of the site.
-
-{% endcomment %}
-
 	<section class="wrapper style1 align-left">
 		<div class="inner editable">
 			<h2>Biography</h2>
@@ -124,23 +108,15 @@ items-3:
 	<section class="wrapper style1 align-left">
 		<div class="inner">
 
-			{% assign content = "" | split: "" %}
+      <div class="items style1 big onload-none onscroll-fade-in" >
+          <section>
+              <span class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/_o14l-GjN9M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+          </section>
 
-        {% capture x %}
-          <span class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/_o14l-GjN9M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
-        {% endcapture %}
+          <section>
+              <span class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/9euLjh2h5iQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+          </section>
+      </div>
 
-        {% assign content = content | push: x %}
-
-        {% capture x %}
-          <span class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/9euLjh2h5iQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
-        {% endcapture %}
-
-        {% assign content = content | push: x %}
-
-			{% include components/items.html
-				settings=page.items-2
-				items=content
-			%}
 		</div>
 	</section>
