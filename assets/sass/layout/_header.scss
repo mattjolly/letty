@@ -25,10 +25,10 @@
 		left: 0;
 		width: 100%;
 		height: _size(header, default);
-		background-color: _palette(bg);
 		box-shadow: 0 0 0.5rem 0 _palette(bg-shadow);
 		cursor: default;
 		z-index: _misc(z-index-base);
+						background-color: rgba(235,235,235,0.5);
 
 		a {
 			display: block;
@@ -69,8 +69,6 @@
 						overflow: hidden;
 						text-decoration: none;
 						color: _palette(fg-bold);
-						padding: 5px;
-						background-color: rgba(235,235,235,0.5);
 
 						&.icon {
 							&:before {
@@ -179,23 +177,22 @@
 		&.alt {
 			@include vendor('animation', 'none');
 			box-shadow: none;
-			background-color: transparent;
 			position: absolute;
 
 			> .logo {
-				top: 1rem;
 				left: 2rem;
+				top: 0.75rem;
 			}
 
 			> nav {
-				top: 1rem;
+				top: 0.75rem;
 				right: 1rem;
 			}
 
 			> .navPanelToggle {
-				top: 1rem;
 				right: 1rem;
-				color: _palette(invert, fg-bold);
+				top: 0.75rem;
+				color: _palette(fg-bold);
 			}
 		}
 
@@ -234,32 +231,17 @@
 			}
 
 			> .logo a {
-				color: _palette(invert, fg-bold) !important; // to override bold style
+				color: _palette(fg-bold) !important; // to override bold style
 			}
 		}
 
 		@include breakpoint('<=small') {
-			height: _size(header, small);
-			line-height: _size(header, small);
-
-			> .logo {
-				left: 1rem;
-
-				.extra {
-					display: none;
-				}
-			}
-		}
-
-		@include breakpoint('<=xsmall') {
 			&.alt {
 				> .logo {
-					top: 0;
 					left: 1rem;
 				}
 
 				> .navPanelToggle {
-					top: 0;
 					right: 0;
 				}
 			}
