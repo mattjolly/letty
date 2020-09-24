@@ -33,13 +33,13 @@ top_row_settings:
 
 	<section class="wrapper style1 align-center">
 		<div class="inner">
-     <h2>Videos</h2>
-     <div class="items style1 big onload-none onscroll-fade-in">
+			<h2>Videos</h2>
+	    	<div class="items style1 big onload-none onscroll-fade-in">
 
 {% for video in page.videos %}
-          <section><div class="inner">
-              <span class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video.ID }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></span>
-          </div></section>
+				<section><div class="inner">
+					<span class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video.ID }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></span>
+				</div></section>
 {% endfor %}
-		</div>
+			</div>
 	</section>
