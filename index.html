@@ -4,6 +4,7 @@ top_row_image: /images/portraits/P1566637.jpg
 performance_image: images/portraits/IMG_2515.JPG
 theatre_image: /images/portraits/Letty-18.jpg
 education_image: /images/portraits/Letty-25.jpg
+ancient_horn_image: /images/portraits/Letty-25.jpg
 top_row_settings:
   style: 1
   fullscreen: true
@@ -28,6 +29,11 @@ education_settings:
   orient: right
   content_align: left
   onscroll_image: fade-in
+ancient_horn_settings:
+  style: 1
+  orient: left
+  content_align: left
+  onscroll_image: fade-in
 ---
 
 <!-- One -->
@@ -39,7 +45,7 @@ education_settings:
 			<li><a class="button primary smooth-scroll-middle" style="cursor: pointer;" href="#performance">Performance</a></li>
 			<li><a class="button primary smooth-scroll-middle" style="cursor: pointer;" href="#theatre">Theatre</a></li>
 			<li><a class="button primary smooth-scroll-middle" style="cursor: pointer;" href="#education">Education</a></li>
-			<li><a class="button primary smooth-scroll-middle" style="cursor: pointer;" href="/ancient-horns">Ancient Horns</a></li>
+			<li><a class="button primary smooth-scroll-middle" style="cursor: pointer;" href="#ancient-horns">Ancient Horns</a></li>
 		</ul>
 	{% endcapture %}
 	{% include components/banner.html
@@ -104,4 +110,22 @@ education_settings:
 		image=page.education_image
 		image-position="center"
 		id="education"
+	%}
+
+<!-- Five -->
+	{% capture content %}
+<div class="editable">
+				<h2>Ancient Horns</h2>
+				<p>Letty is currently an Artist in Residence at Snape Maltings in Suffolk, where she is developing her project Ancient Horns / New Voices based around Etruscan and Greek instruments from the late-Bronze Age.</p>
+			</div>
+		<ul class="actions stacked">
+			<li><a href="/education" class="button">Learn More</a></li>
+		</ul>
+	{% endcapture %}
+	{% include components/spotlight.html
+		settings=page.ancient_horn_settings
+		content=content
+		image=page.ancient_horn_image
+		image-position="center"
+		id="ancient-horns"
 	%}

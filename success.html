@@ -1,0 +1,26 @@
+---
+layout: default
+top_row_image: >-
+  /uploads/Letty Stott residency as part of the 2020 Festival of New (photo by   (c) Britten Pears Arts 9815.jpg
+top_row_settings:
+  style: 1
+  fullscreen: true
+  orient: right
+  content_align: left
+  onload_image: fade-in
+  onload_content: fade-right
+---
+
+<!-- One -->
+	{% capture content %}
+<div class="editable">
+	<h1>Thank you for your message</h1>
+	<p>I'll get back to you as soon as I can.</p>
+</div>		
+	{% endcapture %}
+	{% include components/banner.html
+		settings=page.top_row_settings
+		content=content
+		image=page.top_row_image
+		image-position="top"
+	%}

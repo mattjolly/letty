@@ -4,3 +4,4 @@ _site/
 .jekyll-metadata
 find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch
 .DS_Store
+.DS_Store

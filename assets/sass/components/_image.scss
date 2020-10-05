@@ -6,6 +6,10 @@
 
 /* Image */
 
+	.inner img {
+		max-width:100%;
+		height:auto;
+	}
 	.image {
 		border: 0;
 		border-radius: _size(border-radius);
