@@ -41,7 +41,7 @@
 					<section id="contact" class="wrapper style1 align-center">
 						<div class="inner medium">
 							<h2>Get in touch</h2>
-							<form method="post" action="/success">
+							        <form class="" target="_self" enctype="multipart/form-data" action="https://formkeep.com/f/e963cc3eaa48" accept-charset="UTF-8" method="post">
 								<div class="fields">
 									<div class="field half">
 										<label for="name">Name</label>
@@ -49,17 +49,22 @@
 									</div>
 									<div class="field half">
 										<label for="email">Email</label>
-										<input type="email"  name="_replyto" id="email" value="" />
+										<input type="email" name="Email" id="email" required="required" placeholder="example@example.com" />
 									</div>
 									<div class="field">
 										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="6"></textarea>
+										<textarea name="message" id="message" required="required"></textarea>
 									</div>
 								</div>
-								<input type="hidden" name="_to" value="laetitiastott01@hotmail.co.uk">
-								<input type="text" name="_gotcha" style="display: none;">
+          <div style="opacity:0;position:absolute;top:0;left:-5000px;height:0;width:0">
+            <label for="subscribe_e963cc3eaa48_41133"></label>
+            <input name="subscribe_e963cc3eaa48_41133" value="" tabindex="-1" autocomplete="off"
+                   type="email" id="email_subscribe_e963cc3eaa48_41133" placeholder="Your email here">
+          </div>
 								<ul class="actions special">
-									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
+									<li>
+										<input type="submit" value="Send" data-disable-with="Send" />
+									</li>
 								</ul>
 							</form>
 						</div>
