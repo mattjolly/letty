@@ -1,10 +1,9 @@
 ---
 layout: default
-top_row_image: /images/portraits/P1566637.jpg
-performance_image: images/portraits/IMG_2515.JPG
-theatre_image: /images/portraits/Letty-18.jpg
-education_image: /images/portraits/Letty-25.jpg
-ancient_horn_image: /images/crazy instuments/IMG_1530.jpg
+top_row_image: /images/landscape11.jpeg
+performance_image: /images/landscape1.jpeg
+education_image: /images/portrait4.jpeg
+ancient_horn_image: /images/landscape9.jpeg
 top_row_settings:
   style: 1
   fullscreen: true
@@ -12,26 +11,21 @@ top_row_settings:
   content_align: left
   onload_image: fade-in
   onload_content: fade-right
+ancient_horn_settings:
+  style: 1
+  orient: right
+  content_align: left
+  onscroll_image: fade-in
 performance_settings:
   style: 1
   fullscreen: true
-  orient: right
-  content_align: left
-  image-position: right
-  onscroll_image: fade-in
-theatre_settings:
-  style: 1
   orient: left
   content_align: left
+  image-position: right
   onscroll_image: fade-in
 education_settings:
   style: 1
   orient: right
-  content_align: left
-  onscroll_image: fade-in
-ancient_horn_settings:
-  style: 1
-  orient: left
   content_align: left
   onscroll_image: fade-in
 ---
@@ -42,10 +36,9 @@ ancient_horn_settings:
 				<p class="major">Letty is one of the UK&rsquo;s most exciting and versatile French horn players, with her career spanning across a wide variety of genres.</p>
 			</div>
 		<ul class="actions">
-			<li><a class="button primary smooth-scroll-middle" style="cursor: pointer;" href="#performance">Performance</a></li>
-			<li><a class="button primary smooth-scroll-middle" style="cursor: pointer;" href="#theatre">Theatre</a></li>
-			<li><a class="button primary smooth-scroll-middle" style="cursor: pointer;" href="#education">Education</a></li>
 			<li><a class="button primary smooth-scroll-middle" style="cursor: pointer;" href="#ancient-horns">Ancient Horns</a></li>
+			<li><a class="button primary smooth-scroll-middle" style="cursor: pointer;" href="#performance">Performance</a></li>
+			<li><a class="button primary smooth-scroll-middle" style="cursor: pointer;" href="#education">Education</a></li>
 		</ul>
 	{% endcapture %}
 	{% include components/banner.html
@@ -54,12 +47,31 @@ ancient_horn_settings:
 		image=page.top_row_image
 	%}
 
+<!-- Five -->
+	{% capture content %}
+<div class="editable">
+				<h2>Ancient Horns</h2>
+				<p>Letty is currently undertaking research towards her PhD in Music Archaeology (to be completed in 2030) at the University of Manchester and National Museums Scotland.</p> 
+				<p>Her work focuses on ancient forms of horn and the role these instruments might have had with the societies they came from. Letty's research informs her performance on modern-day copies of instruments such as Karnyx, Lituus, Cornu and Salpinx. </p>
+			</div>
+		<ul class="actions stacked">
+			<li><a href="/ancient-horns" class="button">Learn More</a></li>
+		</ul>
+	{% endcapture %}
+	{% include components/spotlight.html
+		settings=page.ancient_horn_settings
+		content=content
+		image=page.ancient_horn_image
+		image-position="center"
+		id="ancient-horns"
+	%}
+
 <!-- Two -->
 	{% capture content %}
 	<div class="editable">
 				<h2>Performance</h2>
-				<p>Letty has worked with many of the UK's leading orchestras and opera companies and&nbsp;<span style="background-color: inherit;">has performed and toured with a huge variety of</span><span style="background-color: inherit;">&nbsp;artists. </span></p>
-				<p><span style="background-color: inherit;">She has recorded as a session musician for </span><span style="background-color: inherit;">TV and film scores and has performed globally on a range of diverse projects.&nbsp;</span></p>
+				<p>Letty has worked with many of the UK's leading orchestras and opera companies and has performed and toured with a huge variety of artists.</p>
+				<p>She has recorded as a session musician for TV and film scores and has performed globally on a range of diverse projects.</p>
 			</div>
 	<ul class="actions stacked">
 		<li><a href="/performance" class="button">Learn More</a></li>
@@ -71,25 +83,6 @@ ancient_horn_settings:
 		image=page.performance_image
 		image-position="center"
 		id="performance"
-	%}
-
-<!-- Three -->
-	{% capture content %}
-<div class="editable">
-				<h2>Theatre</h2>
-				<p>Letty has considerable experience working in theatre and performed onstage for the highly acclaimed production of <em>Amadeus</em>&nbsp;at the National Theatre:</p>
-				<p><em>&ldquo;These 21 musicians are the backbone of this production, scattering and re-forming throughout, like some sort of murmuration of musically gifted starlings.&rdquo;</em><br />The Times</p>
-			</div>
-		<ul class="actions stacked">
-			<li><a href="/theatre" class="button">Learn More</a></li>
-		</ul>
-	{% endcapture %}
-	{% include components/spotlight.html
-		settings=page.theatre_settings
-		content=content
-		image=page.theatre_image
-		image-position="center"
-		id="theatre"
 	%}
 
 <!-- Four -->
@@ -110,20 +103,3 @@ ancient_horn_settings:
 		id="education"
 	%}
 
-<!-- Five -->
-	{% capture content %}
-<div class="editable">
-				<h2>Ancient Horns</h2>
-				<p>Letty is currently an Artist-in-Residence at Snape Maltings in Suffolk, where she is developing her project Ancient Horns / New Voices based around Etruscan and Greek instruments from the late Iron Age.</p>
-			</div>
-		<ul class="actions stacked">
-			<li><a href="/ancient-horns" class="button">Learn More</a></li>
-		</ul>
-	{% endcapture %}
-	{% include components/spotlight.html
-		settings=page.ancient_horn_settings
-		content=content
-		image=page.ancient_horn_image
-		image-position="center"
-		id="ancient-horns"
-	%}
